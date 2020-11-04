@@ -14,17 +14,17 @@
 <body>
     <!-- Navbar -->
     <nav id="navbar">
-        <div class="navbar_log">
+        <div class="navbar__log">
             <i class="fab fa-diaspora"></i>
-            <a href="#"></a>
+            <a href="#">Incheon</a>
         </div>
-        <ul class="navbar_menu">
-            <li class="navbar_menu_item">Home</li>
-            <li class="navbar_menu_item">About</li>
-            <li class="navbar_menu_item">Skils</li>
-            <li class="navbar_menu_item">My work</li>
-            <li class="navbar_menu_item">Testimonials</li>
-            <li class="navbar_menu_item">Contact</li>
+        <ul class="navbar__menu">
+            <li class="navbar__menu__item active">Home</li>
+            <li class="navbar__menu__item">About</li>
+            <li class="navbar__menu__item">Skils</li>
+            <li class="navbar__menu__item">My work</li>
+            <li class="navbar__menu__item">Testimonials</li>
+            <li class="navbar__menu__item">Contact</li>
         </ul>        
     </nav>
     <!-- Home -->
@@ -119,10 +119,57 @@
         </div>
     </section>
     <!-- Work -->
-    <section id="work"></section>
-    <!-- Testimonials -->
-    <section id="testimonials"></section>
+    <section id="work">
+        <h1>My work</h1>
+        <h3>Projects</h3>
+        <div class="work__categories">
+            <button class="category__btn">All<span class="category__count">8</span></div></button>
+            <button class="category__btn">Front-end<span class="category__count">3</span></button>
+            <button class="category__btn">Back-end<span class="category__count">3</span></button>
+        </div>
+        <div class="work__projects">
+            <a href="#" class="project" target="blank">
+                <img class="project__img" src="/imgs/incheon.png" alt="">
+                <div class="project__description">
+                    <h3>Shopping Game</h3>
+                    <span>조그마한 쇼핑 게임</span>
+                </div>
+            </a>
+        </div>
+    </section>    
     <!-- Contact -->
-    <section id="contact"></section>
+    <section id="contact">
+        <h1 class="contact__title">Let's talk</h1>
+        <h2 class="contact__email">icjang123@naver.com</h2>
+        <div class="contact__links">
+            <a href="#" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="#" target="_blank">
+                <i class="fab fa-instagram-square"></i>
+            </a>
+            <a href="#" target="_blank">
+                <i class="fas fa-comment-dots"></i>
+            </a>
+        </div>
+        <ul>
+            <li>
+                <p class="tit">Where i live</p>
+                <p class="body">Gimpo, Gyunggi-do, Republic of Korea</p>
+            </li>
+            <li>
+                <p class="tit">Give me a call</p>
+                <p class="body">T. +82 (0)10 9730 0143</p>
+            </li>
+            <li>
+                <p class="tit">Or, why don’t you email me?</p>
+                <p class="body">
+                    <a href="#">
+                        icjang123@naver.com
+                    </a>
+                </p>
+            </li>
+        </ul>
+    </section>
 </body>
 </html>
