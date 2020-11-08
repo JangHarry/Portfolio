@@ -13,6 +13,7 @@ document.addEventListener('scroll', () => {
     }
 })
 
+
 // Handle scrolling 
 
 const navbarMenu = document.querySelector('.navbar__menu');
@@ -24,8 +25,14 @@ navbarMenu.addEventListener('click', ()=>{
     if(link == null) {
         return;
     }
-    
+    navbarMenu.classList.remove('open');
     scrollIntoView(link);
+})
+
+//반응형 Navbar 만들기
+const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
+navbarToggleBtn.addEventListener('click', () => {
+    navbarMenu.classList.toggle('open');
 })
 
 
