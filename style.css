@@ -31,7 +31,7 @@
   --size-border-radius: 4px;
 
   /* Animation */
-  --animation-duration: 300ms ease;
+  --animation-duration: 300ms;
 }
 
 
@@ -98,6 +98,7 @@ p {
   color: var(--color-white);
   padding: 8px;
   transition: all var(--animation-duration) ease-in-out;
+  z-index: 1;
 }
 
 #navbar.navbar--dark{
@@ -113,18 +114,18 @@ p {
   font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
 }
+
 .navbar__menu__item {
   padding: 8px 12px;
   margin: 0 4px;
+  color: var(--color-white);
   cursor: pointer;
   border-radius: var(--size-border-radius);
+  border: 1px solid transparent;  
 }
 
-.navbar__menu__item.active {
-  border: 1px solid var(--color-white);
-}
-
-.navbar__menu__item:hover {
+.navbar__menu__item:hover {  
+  border-color : var(--color-white);
   background-color: var(--color-dark-pink);
 }
 
@@ -308,13 +309,13 @@ p {
     padding: 8px 48px;
 }
 
-.category__btn.active,
+.category__btn.selected,
 .category__btn:hover{
     background-color: var(--color-pink);
     color: :var(var(--color-white));
 }
 
-.category__btn.category__btn.active .category__count,
+.category__btn.category__btn.selected .category__count,
 .category__btn:hover .category__count{
     opacity: 1;
     top:0;
@@ -338,8 +339,14 @@ p {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    opacity: 1;
+    transition: all var(--animation-duration) ease-in-out;
 }
 
+.work__projects.anim-out{
+  opacity: 0;
+  transform :  scale(0.96) translateY(40px);
+}
 .project{
     display: flex;
     justify-content: center;
@@ -348,6 +355,10 @@ p {
     width: 280px;
     height: 250px;
     margin: 2px;
+}
+
+.project.invisible{
+  display: none;
 }
 
 .project__img{
@@ -415,6 +426,27 @@ p {
 .contact__links i:hover{
     transform:  scale(1.1);
     color: var(--color-yellow);
+}
+
+/* Scroll */
+.arrow-up {
+  position: fixed;
+  bottom : 50px;
+  right: 50px;
+  font-size: 50px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  color: var(--color-white);
+  background-color: var(--color-pink);   
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 300ms ease-in;
+}
+
+.arrow-up.visible{  
+  opacity: 1;
+  pointer-events: auto;
 }
 
 @media screen and (max-width: 768px) {
