@@ -368,6 +368,7 @@ p {
     width: 280px;
     height: 250px;
     margin: 2px;
+    margin-bottom: 10px;
 }
 
 .project.invisible{
@@ -535,4 +536,5 @@ p {
     .major{
       margin-bottom: 30px;
     }
+    
 }
